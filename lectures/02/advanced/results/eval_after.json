@@ -1,0 +1,115 @@
+{
+  "summary": {
+    "label": "after",
+    "n": 15,
+    "known_keyword_rate": 0.5833333333333334,
+    "seconds": 44.264815649999946
+  },
+  "rows": [
+    {
+      "question": "LoRAの概要を教えてください。",
+      "group": "known",
+      "answer": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
+      "keyword_ok": true,
+      "manual_correct": null
+    },
+    {
+      "question": "LoRAは元の重みをどう扱って調整しますか？",
+      "group": "paraphrase",
+      "answer": "行列の重みを2ビットで表し、調整する行列の大きさを決めるだけで全体の重みを変われる。より大きな行列の重みを表すために2ビットに絞る。",
+      "keyword_ok": false,
+      "manual_correct": null
+    },
+    {
+      "question": "量子化の概要を教えてください。",
+      "group": "known",
+      "answer": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
+      "keyword_ok": true,
+      "manual_correct": null
+    },
+    {
+      "question": "量子化では数値の表現をどう変えますか？",
+      "group": "paraphrase",
+      "answer": "より小さなモデルで、同じ質問を回答できるように取る小さなパラメータをメモリに載せること。最小化の精度は上がるが、表現力は下がる。",
+      "keyword_ok": false,
+      "manual_correct": null
+    },
+    {
+      "question": "ファインチューニングの概要を教えてください。",
+      "group": "known",
+      "answer": "事前学習済みモデルを、特定のタスクや形式に合ったデータで追加学習させること。出力の形式や口調、特定ドメインの振る舞いを身につけさせるのに向く。最新の事実を覚えさせる用途には、ツールやRAGで外部データを参照させるほうが向くことが多い。",
+      "keyword_ok": true,
+      "manual_correct": null
+    },
+    {
+      "question": "追加学習はどのような目的で行うのですか？",
+      "group": "paraphrase",
+      "answer": "事前学習済みモデルを、特定のタスクや形式に合ったデータで追加して、その結果をモデルに渡して評価する手法。最新のデータで学習させるほうが追加学習が上がる。",
+      "keyword_ok": true,
+      "manual_correct": null
+    },
+    {
+      "question": "トークンの概要を教えてください。",
+      "group": "known",
+      "answer": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。",
+      "keyword_ok": true,
+      "manual_correct": null
+    },
+    {
+      "question": "tokenは何を数えるときに使う単位ですか？",
+      "group": "paraphrase",
+      "answer": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
+      "keyword_ok": false,
+      "manual_correct": null
+    },
+    {
+      "question": "temperatureの概要を教えてください。",
+      "group": "known",
+      "answer": "次のトークンを選ぶときのランダムさを調整する設定値。低いほど出力が安定し、高いほど多様になる。同じ質問でも回答が変わる理由の一つ。",
+      "keyword_ok": true,
+      "manual_correct": null
+    },
+    {
+      "question": "温度パラメータを上げると回答はどう変化しますか？",
+      "group": "paraphrase",
+      "answer": "出力の分布を均化する。同じ質問でも回答が変わる理由の一つ。Pydantic AIでは Agent の temperature を指定する。",
+      "keyword_ok": false,
+      "manual_correct": null
+    },
+    {
+      "question": "ハルシネーションの概要を教えてください。",
+      "group": "known",
+      "answer": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
+      "keyword_ok": true,
+      "manual_correct": null
+    },
+    {
+      "question": "幻覚と呼ばれるLLMの誤りはどのようなものですか？",
+      "group": "paraphrase",
+      "answer": "実際に起こらないことを、1つの質問で複数回質問し、その結果をモデルに渡してモデルが解釈して返すこと。APIの料金やレート制限を避けるために。",
+      "keyword_ok": false,
+      "manual_correct": null
+    },
+    {
+      "question": "BERTの概要を教えてください。",
+      "group": "unknown",
+      "answer": "事前学習したモデルで、入力と出力の型を同じにする（LoRAで）そして、多くの場合、文章をコードとして読み込む（CodeLLaM）。テスト用の文章でモデルを呼び出して結果を返す。",
+      "keyword_ok": null,
+      "manual_correct": null
+    },
+    {
+      "question": "拡散モデルの概要を教えてください。",
+      "group": "unknown",
+      "answer": "LLMが広範囲で学習する手法。周りを探索しながら学習し、最終的に目的のタスクに絞る。手法が多様で、選ковые（最もったし）や回数拡散（最常见）などがある。",
+      "keyword_ok": null,
+      "manual_correct": null
+    },
+    {
+      "question": "グラフニューラルネットワークの概要を教えてください。",
+      "group": "unknown",
+      "answer": "パラメータと学習データで構成したモデル。周りを回すことで関数を計算し、その結果を次のステップへ伝える。回数を増やしモデルを学習させる。",
+      "keyword_ok": null,
+      "manual_correct": null
+    }
+  ]
+}
