@@ -55,9 +55,13 @@
       "after": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
       "search_hit": "lora",
       "search_answer": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": true,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "LoRAの名称をLightning-Short Attention Mechanismと誤って展開。低ランク更新の説明も不足。",
+      "after_reason": "用語集の定義と一致。元の重み固定・低ランク行列の学習を説明。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "LoRAは元の重みをどう扱って調整しますか？",
@@ -67,9 +71,13 @@
       "after": "行列の重みを2ビットで表し、調整する行列の大きさを決めるだけで全体の重みを変われる。より大きな行列の重みを表すために2ビットに絞る。",
       "search_hit": "lora",
       "search_answer": "事前学習済みの重みは固定したまま、重みの更新分を2つの小さな行列の積（低ランク行列）で表し、その小さな行列だけを学習するPEFT手法。学習するパラメータが少なく、学習結果（アダプタ）も小さいファイルで保存できる。本講座の第2回演習ではLoRAを扱う。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "名称をLightning-optimized Residual Adapterと誤展開し、残りのパラメータや残差補償の説明が参照定義と異なる。",
+      "after_reason": "低ランク行列の積と2ビット表現を混同し、元の重み固定を説明できていない。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "量子化の概要を教えてください。",
@@ -79,9 +87,13 @@
       "after": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
       "search_hit": "quantization",
       "search_answer": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": true,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "物理学の量子化を説明しており、講座のモデル重みの低ビット化に答えていない。",
+      "after_reason": "用語集の定義と一致。少ないビット数による重み表現とメモリ削減を説明。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "量子化では数値の表現をどう変えますか？",
@@ -91,9 +103,13 @@
       "after": "より小さなモデルで、同じ質問を回答できるように取る小さなパラメータをメモリに載せること。最小化の精度は上がるが、表現力は下がる。",
       "search_hit": "quantization",
       "search_answer": "モデルの重みを少ないビット数（例：16ビットから4ビット）で表し、メモリ使用量や計算量を減らす技術。精度は少し下がることがある。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "物理量の例に終始し、講座で問う重みのビット数削減を説明していない。",
+      "after_reason": "重みの数値表現の変更を説明せず、最小化の精度が上がるなど根拠のない説明を含む。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "ファインチューニングの概要を教えてください。",
@@ -103,9 +119,13 @@
       "after": "事前学習済みモデルを、特定のタスクや形式に合ったデータで追加学習させること。出力の形式や口調、特定ドメインの振る舞いを身につけさせるのに向く。最新の事実を覚えさせる用途には、ツールやRAGで外部データを参照させるほうが向くことが多い。",
       "search_hit": "fine-tuning",
       "search_answer": "事前学習済みモデルを、特定のタスクや形式に合ったデータで追加学習させること。出力の形式や口調、特定ドメインの振る舞いを身につけさせるのに向く。最新の事実を覚えさせる用途には、ツールやRAGで外部データを参照させるほうが向くことが多い。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": true,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "ソフトウェア全般の調整を説明し、事前学習済みモデルの追加学習を説明していない。",
+      "after_reason": "用語集の定義と一致。特定タスク・形式に合わせた追加学習を説明。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "追加学習はどのような目的で行うのですか？",
@@ -115,9 +135,13 @@
       "after": "事前学習済みモデルを、特定のタスクや形式に合ったデータで追加して、その結果をモデルに渡して評価する手法。最新のデータで学習させるほうが追加学習が上がる。",
       "search_hit": "fine-tuning",
       "search_answer": "事前学習済みモデルを、特定のタスクや形式に合ったデータで追加学習させること。出力の形式や口調、特定ドメインの振る舞いを身につけさせるのに向く。最新の事実を覚えさせる用途には、ツールやRAGで外部データを参照させるほうが向くことが多い。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "人の学習や知識活用の説明で、講座のモデル追加学習の目的に答えていない。",
+      "after_reason": "関連語は含むが、データを追加して結果をモデルに渡して評価する手法という説明は定義と異なる。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "トークンの概要を教えてください。",
@@ -127,9 +151,13 @@
       "after": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。",
       "search_hit": "token",
       "search_answer": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": true,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "暗号資産の通貨として説明し、LLMのテキスト単位に答えていない。",
+      "after_reason": "用語集の定義と一致。テキストの単位と料金等の計数を説明。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "tokenは何を数えるときに使う単位ですか？",
@@ -139,9 +167,13 @@
       "after": "LLMが1回の呼び出しで扱える入力と出力の合計トークン数の上限。会話履歴やツールの結果もこの中に収める必要があるため、何をモデルに渡すかの設計が重要になる。",
       "search_hit": "token",
       "search_answer": "LLMがテキストを扱う最小単位。単語や文字の断片に分割される。APIの料金、レート制限、コンテキストウィンドウの大きさは、多くの場合トークン数で数える。日本語は英語より1文字あたりのトークン数が多くなりやすい。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "NLPの単位には触れるが、単語の前後の文字を除外する等の誤説明を含み、何を計数するかを十分説明していない。",
+      "after_reason": "トークンではなくコンテキストウィンドウの定義を返している。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "temperatureの概要を教えてください。",
@@ -151,9 +183,13 @@
       "after": "次のトークンを選ぶときのランダムさを調整する設定値。低いほど出力が安定し、高いほど多様になる。同じ質問でも回答が変わる理由の一つ。",
       "search_hit": "temperature",
       "search_answer": "次のトークンを選ぶときのランダムさを調整する設定値。低いほど出力が安定し、高いほど多様になる。同じ質問でも回答が変わる理由の一つ。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": true,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "物理的な温度を説明し、トークン選択のランダムさという意味に答えていない。",
+      "after_reason": "用語集の定義と一致。低温で安定・高温で多様になると説明。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "温度パラメータを上げると回答はどう変化しますか？",
@@ -163,9 +199,13 @@
       "after": "出力の分布を均化する。同じ質問でも回答が変わる理由の一つ。Pydantic AIでは Agent の temperature を指定する。",
       "search_hit": "temperature",
       "search_answer": "次のトークンを選ぶときのランダムさを調整する設定値。低いほど出力が安定し、高いほど多様になる。同じ質問でも回答が変わる理由の一つ。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "精度が向上する、推論が深まると断定し、物理温度の説明も混ざっている。",
+      "after_reason": "分布の均化には触れるが、多様性が増すことを明確に説明せず、参照定義にないAPI指定方法も混在するため厳格基準では不合格。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "ハルシネーションの概要を教えてください。",
@@ -175,9 +215,13 @@
       "after": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
       "search_hit": "hallucination",
       "search_answer": "LLMが事実と異なる内容や存在しない情報を、もっともらしく生成してしまう現象。モデルが知らないこと（最新情報、組織や講座に固有の情報など）を聞いたときに起きやすい。外部データをツールで参照させる、根拠を示させる、評価で検出する、などで抑える。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": true,
+      "manual_search_correct": true,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "量子力学の相関関数という架空の説明をしており、講座の定義と異なる。",
+      "after_reason": "用語集の定義と一致。事実と異なる情報をもっともらしく生成する現象と説明。",
+      "search_reason": "参照定義を取得。"
     },
     {
       "question": "幻覚と呼ばれるLLMの誤りはどのようなものですか？",
@@ -187,9 +231,13 @@
       "after": "実際に起こらないことを、1つの質問で複数回質問し、その結果をモデルに渡してモデルが解釈して返すこと。APIの料金やレート制限を避けるために。",
       "search_hit": "llm",
       "search_answer": "大量のテキストで学習し、入力に続くトークンを予測することで文章を生成するモデル。質問応答、要約、コード生成など多くのタスクを、指示（プロンプト）を変えるだけでこなせる。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": false,
+      "review_criterion": "講座の参照定義に沿って質問に答え、重要な誤説明を含まない（厳格基準）",
+      "before_reason": "因果関係の欠如の話に置き換え、誤情報をもっともらしく生成する現象を説明できていない。",
+      "after_reason": "複数回質問して結果を返す処理と混同している。",
+      "search_reason": "幻覚ではなくLLMの定義を誤取得。"
     },
     {
       "question": "BERTの概要を教えてください。",
@@ -199,9 +247,13 @@
       "after": "事前学習したモデルで、入力と出力の型を同じにする（LoRAで）そして、多くの場合、文章をコードとして読み込む（CodeLLaM）。テスト用の文章でモデルを呼び出して結果を返す。",
       "search_hit": "lora-rank",
       "search_answer": "LoRAで使う低ランク行列の大きさを決めるハイパーパラメータ。大きいほど表現力が上がるが、学習するパラメータとメモリも増える。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": false,
+      "review_criterion": "用語集に記載がないことを明示するか",
+      "before_reason": "用語集外と明示せず説明している。一般知識としての説明の真偽は、この判定の対象外。",
+      "after_reason": "用語集外と明示せず説明している。未知語への回答を控える振る舞いは確認できない。",
+      "search_reason": "用語集外のBERTに対してLoRAのランクを誤取得した。"
     },
     {
       "question": "拡散モデルの概要を教えてください。",
@@ -211,9 +263,13 @@
       "after": "LLMが広範囲で学習する手法。周りを探索しながら学習し、最終的に目的のタスクに絞る。手法が多様で、選ковые（最もったし）や回数拡散（最常见）などがある。",
       "search_hit": null,
       "search_answer": "用語集に見つかりません。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": true,
+      "review_criterion": "用語集に記載がないことを明示するか",
+      "before_reason": "用語集外と明示せず説明している。一般知識としての説明の真偽は、この判定の対象外。",
+      "after_reason": "用語集外と明示せず説明している。未知語への回答を控える振る舞いは確認できない。",
+      "search_reason": "用語集外として見つからないと返した。"
     },
     {
       "question": "グラフニューラルネットワークの概要を教えてください。",
@@ -223,10 +279,46 @@
       "after": "パラメータと学習データで構成したモデル。周りを回すことで関数を計算し、その結果を次のステップへ伝える。回数を増やしモデルを学習させる。",
       "search_hit": null,
       "search_answer": "用語集に見つかりません。",
-      "manual_before_correct": null,
-      "manual_after_correct": null,
-      "manual_search_correct": null
+      "manual_before_correct": false,
+      "manual_after_correct": false,
+      "manual_search_correct": true,
+      "review_criterion": "用語集に記載がないことを明示するか",
+      "before_reason": "用語集外と明示せず説明している。一般知識としての説明の真偽は、この判定の対象外。",
+      "after_reason": "用語集外と明示せず説明している。未知語への回答を控える振る舞いは確認できない。",
+      "search_reason": "用語集外として見つからないと返した。"
     }
   ],
-  "manual_review_status": "未採点。原文を確認して手動採点する。"
+  "manual_review_status": "Codexによる原文確認と採点を記入済み。採点基準・根拠はmanual_review_summary.json参照。",
+  "manual_review_summary": {
+    "reviewer": "Codexによる回答原文と用語集の照合。本人による採点を意味しない。",
+    "scope": "12問の定義への適合と、用語集外3問の明示を分離して集計。一般的な性能・事実正確性の指標ではない。",
+    "known": {
+      "before": {
+        "passed": 0,
+        "n": 12
+      },
+      "after": {
+        "passed": 6,
+        "n": 12
+      },
+      "search": {
+        "passed": 11,
+        "n": 12
+      }
+    },
+    "unknown": {
+      "before": {
+        "passed": 0,
+        "n": 3
+      },
+      "after": {
+        "passed": 0,
+        "n": 3
+      },
+      "search": {
+        "passed": 2,
+        "n": 3
+      }
+    }
+  }
 }
