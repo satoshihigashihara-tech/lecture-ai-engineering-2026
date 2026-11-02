@@ -1,0 +1,62 @@
+[
+  {
+    "question": "LoRAの概要を教えてください。",
+    "group": "known"
+  },
+  {
+    "question": "LoRAは元の重みをどう扱って調整しますか？",
+    "group": "paraphrase"
+  },
+  {
+    "question": "量子化の概要を教えてください。",
+    "group": "known"
+  },
+  {
+    "question": "量子化では数値の表現をどう変えますか？",
+    "group": "paraphrase"
+  },
+  {
+    "question": "ファインチューニングの概要を教えてください。",
+    "group": "known"
+  },
+  {
+    "question": "追加学習はどのような目的で行うのですか？",
+    "group": "paraphrase"
+  },
+  {
+    "question": "トークンの概要を教えてください。",
+    "group": "known"
+  },
+  {
+    "question": "tokenは何を数えるときに使う単位ですか？",
+    "group": "paraphrase"
+  },
+  {
+    "question": "temperatureの概要を教えてください。",
+    "group": "known"
+  },
+  {
+    "question": "温度パラメータを上げると回答はどう変化しますか？",
+    "group": "paraphrase"
+  },
+  {
+    "question": "ハルシネーションの概要を教えてください。",
+    "group": "known"
+  },
+  {
+    "question": "幻覚と呼ばれるLLMの誤りはどのようなものですか？",
+    "group": "paraphrase"
+  },
+  {
+    "question": "BERTの概要を教えてください。",
+    "group": "unknown"
+  },
+  {
+    "question": "拡散モデルの概要を教えてください。",
+    "group": "unknown"
+  },
+  {
+    "question": "グラフニューラルネットワークの概要を教えてください。",
+    "group": "unknown"
+  }
+]
